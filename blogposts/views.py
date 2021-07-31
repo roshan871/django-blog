@@ -25,9 +25,6 @@ def blog_post(request, post_id):
     }
     return render(request, 'blogposts/blog_post.html', context)
 
-
-
-
 def new_post(request):
     if request.method == "POST":
         print('POST request')
@@ -54,3 +51,4 @@ def about(request):
         'title_text': 'about'
     }
     return render(request, 'blogposts/about.html', context)
+

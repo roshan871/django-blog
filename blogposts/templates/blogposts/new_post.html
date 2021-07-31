@@ -1,20 +1,43 @@
 {% extends "base.html" %} 
 {% block content %}
-
-    <form action="{% url 'new_post' %}" method="POST">
-        {% csrf_token %}
-        <label>
-            Title:
-            <input type="text" name="title" required />
-        </label>
-        <label>
-            Author:
-            <input type="text" name="author" required />
-        </label>
-        <label>
-            Post:
-            <textarea name="description" cols="30" rows="10" required></textarea>
-        </label>
-        <button type="submit">New Post</button>
-    </form>
+  <div class="container">
+       <div class="row mt-5 mb-3 p-10 ms-10">
+           <div class="create-blog col-sm-8 shadow p-3">
+               <h4>Create your blog here:</h4>
+                <form action="{% url 'new_post' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="mb-3 mt-3">
+                        <label for="exampleInputEmail1" class="form-label">Title:</label>
+                        <input type="text" class="form-control"  aria-describedby="titleHelp" name="title" required >
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Author:</label>
+                        <input type="text" class="form-control"  aria-describedby="titleHelp" required >
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Post:</label>
+                        <textarea name="description" class = "form-control" cols="30" rows = "10" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary mb-5">Submit</button>
+                </form>
+           </div>
+       </div>
+   </div>
+   <!--<form action="{% url 'new_post' %}" method="POST">
+    {% csrf_token %}
+    <label>
+        Title:
+        <input type="text" name="title" required />
+    </label>
+    <label>
+        Author:
+        <input type="text" name="author" required />
+    </label>
+    <label>
+        Post:
+        <textarea name="description" cols="30" rows="10" required></textarea>
+    </label>
+    <button type="submit">New Post</button>
+</form>-->
 {% endblock %}
+
