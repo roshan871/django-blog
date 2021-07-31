@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+}
+
+.carousel-item {
+  border: 5px solid grey;
+  overflow: hidden;
+}
+.create-blog {
+  background-color: #eef3f8;
+  margin-left: 2px;
+}
