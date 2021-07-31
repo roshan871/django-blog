@@ -1,1 +1,1 @@
-web: gunicorn django-project4.wsgi
+web: gunicorn blog.wsgi
