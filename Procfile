@@ -1,0 +1,1 @@
+web: gunicorn django-project4.wsgi
