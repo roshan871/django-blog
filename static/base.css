@@ -1,6 +1,12 @@
 * {
   margin: 0;
 }
+.title {
+  margin: 1rem 0 1rem 1rem;
+}
+.welcome {
+  margin: 1rem 0 1.9rem 1rem;
+}
 
 .carousel-item {
   border: 5px solid grey;
@@ -50,6 +56,11 @@ textarea {
   margin-top: 10px;
   cursor: pointer;
 }
+.jumbotron {
+  width: 57%;
+  margin-top: 1rem;
+  margin-left: 6rem;
+}
 
 textarea {
   border: 2px solid silver;
@@ -58,4 +69,7 @@ textarea {
 .form-buttons {
   display: flex;
   justify-content: flex-start;
+}
+.blogpost-count {
+  color: white;
 }
