@@ -1,16 +1,46 @@
+
+
+
 {% extends "base.html" %} 
 {% block content %}
-    <div class="blog-post">
-        <h2>{{ post.title }}</h2>
-        <p>Author: {{ post.author }}. Published on {{ post.publish_date }}</p>
-        {% if post.description|length <= 5 %} 
-        <p>Description is currently not available.</p>
-        {% else %}
-        <p>{{ post.description }} 
-        {% endif %}
-        <p><a href="{% url 'posts' %}">Back to blog posts</a></p>
+{% load static %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mt-3 left">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <img src="{% static 'base/img/Roberto.jpeg' %}" class="d-block w-100" alt="carousel1">
+                    <h2 class="card-title ">{{ post.title }}</h2>
+                <p class="card-text text-muted h6" >{{ post.author }} | {{ post.publish_date }}</p>
+                {% if post.description|length <= 5 %} 
+                    <p>Description is currently not available.</p>
+                {% else %}
+                    <p>{{ post.description }}
+                {% endif %}
+                <p><a href="{% url 'posts' %}" class="btn btn-primary">Back to blog posts</a></p>
+                </div>
+            </div> 
+            </div>
+            <div class="col-md-4 mt-3">
+                <div class="card" style="width: 18rem;">
+                    <div id="carouselExampleControls" class="carousel slide " data-bs-ride="carousel">
+                        <div class="card-body">
+                            <h6 class="card-title">ADVERTISEMENT</h6>
+                            <hr />
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-image">
+                                <img src="{% static 'base/img/ad-2.jpeg' %}" class="d-block w-100" alt="carousel1">
+                                <img src="{% static 'base/img/ad-3.gif' %}" class="d-block w-100" alt="carousel1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-        
-    
-
 {% endblock %}
+
+
+  

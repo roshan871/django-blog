@@ -7,45 +7,36 @@
     <div class="col-md-8 mt-3 left">
       {% for post in blogposts %} 
       <div class="card mb-4">
-        <div class="card-body">
-          <h2 class="card-title ">{{ post.title }}</h2>
-          <p class="card-text text-muted h6" >{{ post.author }} | {{ post.publish_date }}</p>
-          {% if post.description|length <= 5 %} 
-            <p>Description is currently not available.</p>
-          {% else %}
-            <p>{{ post.description }} <a href="{% url 'post' post.id %}" class="btn btn-primary">Read more</a></p>
-          {% endif %}
+          <div class="card-body">
+            <div class="car-body-image">
+          </div>
+          <div class="card-body-text">
+            <h2 class="card-title ">{{ post.title }}</h2>
+            <p class="card-text text-muted h6" >{{ post.author }} | {{ post.publish_date }}</p>
+            {% if post.description|length <= 5 %} 
+              <p>Description is currently not available.</p>
+            {% else %}
+              <p>{{ post.description }} <a href="{% url 'post' post.id %}" class="btn btn-primary">Read more</a></p>
+            {% endif %}
+          </div>
         </div>
       </div> 
       {% endfor %}
     </div>
-    <div class="col-md-4 mt-3 left">
-      <div class="card" style="width: 18rem;">
-        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="col-md-4 mt-3">
+      <div class="card sticky-top" style="width: 18rem; top:0;">
+        <div id="carouselExampleControls" class="carousel slide " data-bs-ride="carousel">
+          <div class="card-body">
+            <h6 class="card-title">ADVERTISEMENT</h6>
+            <hr />
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
           <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="{% static 'base/img/carousel1.png' %}" class="d-block w-100" alt="carousel1">
-            </div>
-            <div class="carousel-item">
-              <img src="{% static 'base/img/carousel2.png' %}" class="d-block w-100" alt="carousel2">
-            </div>
-            <div class="carousel-item">
-              <img src="{% static 'base/img/carousel3.png' %}" class="d-block w-100" alt="carousel3">
+            <div class="carousel-image">
+              <img src="{% static 'base/img/ad-1.png' %}" class="d-block w-100" alt="carousel1">
+              <img src="{% static 'base/img/ad-3.gif' %}" class="d-block w-100" alt="carousel1">
             </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>
     </div>

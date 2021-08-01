@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path
 
 from . import views as blogposts_views
+
 urlpatterns = [
     path('', blogposts_views.index, name='index'),
     path('posts/', blogposts_views.blog_posts, name='posts'),
