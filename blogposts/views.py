@@ -52,3 +52,5 @@ def about(request):
     }
     return render(request, 'blogposts/about.html', context)
 
+
+
