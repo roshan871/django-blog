@@ -18,14 +18,13 @@ body {
   border: 5px solid grey;
   overflow: hidden;
 }
-.background-img {
+.background-image {
   width: 100%;
   overflow: hidden;
   background-size: cover;
-}
-.card {
   border: none;
 }
+
 .create-blog {
   display: flex;
   flex-direction: column;
@@ -91,9 +90,7 @@ body {
 .container {
   padding-top: 20px;
 }
-#about {
-  border: 1px solid black;
-}
+
 /*new_post section */
 label {
   display: flex;
@@ -140,6 +137,8 @@ form {
 }
 
 @media (max-width: 700px) {
+  .brand-title {
+  }
   .toggle-button {
     display: flex;
   }
