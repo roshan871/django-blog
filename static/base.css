@@ -23,6 +23,9 @@ body {
   overflow: hidden;
   background-size: cover;
 }
+.card {
+  border: none;
+}
 .create-blog {
   display: flex;
   flex-direction: column;
