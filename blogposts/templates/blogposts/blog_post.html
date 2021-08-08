@@ -9,7 +9,6 @@
             <div class="col-md-8 mt-3 left">
             <div class="card mb-4">
                 <div class="card-body">
-                    <img src="{% static 'base/img/Roberto.jpeg' %}" class="d-block w-100" alt="carousel1">
                     <h2 class="card-title ">{{ post.title }}</h2>
                 <p class="card-text text-muted h6" >{{ post.author }} | {{ post.publish_date }}</p>
                 {% if post.description|length <= 5 %} 

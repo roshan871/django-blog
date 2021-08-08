@@ -7,4 +7,5 @@ class Blogpost(models.Model):
     description=models.TextField()
     publish_date = models.DateField(default=datetime.date.today)
     
+    
 
